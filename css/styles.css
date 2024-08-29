@@ -1,0 +1,70 @@
+body{
+    background-color: #04FEE1;
+}
+
+@font-face {
+    font-family: GrandHotel;
+    src: url(../fonts/GrandHotel-Regular.ttf);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara gambar dan teks */
+}
+
+img.titleImages {
+    width: 180px;
+    height: auto; /* Menjaga proporsi gambar */
+    border: 10px solid black;
+}
+
+.title {
+    width: 100%;
+    height: 120px;
+    background-color: #13DFA9;
+    font-size: 40px;
+
+    font-weight: 600;
+    -webkit-text-stroke: 0.5px white;
+    border: 10px solid black;
+    text-align: center;
+    font-family: GrandHotel;
+    margin: 0; /* Menghapus margin default dari div */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    margin: 0; /* Menghapus margin default dari <h1> */
+}
+
+.card-container {
+    margin-top: 20px; /* Atur jarak antara card dan header */
+}
+
+.card {
+    width: 100%; /* Atur lebar card sesuai kebutuhan */
+    max-width: 300px; /* Atur lebar maksimal card */
+    margin: 0 auto;
+}
+
+.card-img-top {
+    height: 100%; /* Atur tinggi gambar card sesuai kebutuhan */
+    object-fit:contain; /* Mengatur cara gambar ditampilkan di dalam elemen gambar */
+    object-position: center top;
+}
+
+.card-body {
+    padding: 0.5rem; /* Atur padding dalam card sesuai kebutuhan */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Sesuaikan ukuran font judul card */
+}
+
+.card-text {
+    font-size: 0.875rem; /* Sesuaikan ukuran font teks card */
+}
