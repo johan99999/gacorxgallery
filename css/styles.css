@@ -1,3 +1,4 @@
+
 body{
     background-color: #04FEE1;
 }
@@ -10,13 +11,22 @@ body{
 .header-container {
     display: flex;
     align-items: center;
+    padding: 10px;
     gap: 10px; /* Jarak antara gambar dan teks */
 }
 
+
+
 img.titleImages {
-    width: 180px;
+    width: 120px;
     height: auto; /* Menjaga proporsi gambar */
     border: 10px solid black;
+    padding: 10px;
+}
+
+img.titleImages:hover{
+    transform: scale(1.01); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .title {
@@ -37,18 +47,36 @@ img.titleImages {
     justify-content: center;
 }
 
+.title:hover{
+    background-color: aliceblue;
+    transform: scale(1.01); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .title h1 {
     margin: 0; /* Menghapus margin default dari <h1> */
 }
 
 .card-container {
     margin-top: 20px; /* Atur jarak antara card dan header */
+    display: flex;
+    flex-wrap: wrap; /* Membuat card-card bisa membungkus ke baris berikutnya jika tidak cukup lebar */
+    justify-content: center; /* Mengatur jarak antar card */
+    gap: 10px; /* Jarak antar card */
 }
 
+
 .card {
-    width: 100%; /* Atur lebar card sesuai kebutuhan */
-    max-width: 300px; /* Atur lebar maksimal card */
+    width: 190px; /* Atur lebar card sesuai kebutuhan */
+    height: 20px;
+    max-width: 800px; /* Atur lebar maksimal card */
     margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi yang mulus */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan untuk efek mengambang */
 }
 
 .card-img-top {
@@ -68,3 +96,5 @@ img.titleImages {
 .card-text {
     font-size: 0.875rem; /* Sesuaikan ukuran font teks card */
 }
+
+
