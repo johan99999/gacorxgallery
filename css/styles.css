@@ -111,6 +111,8 @@ a {
     flex-wrap: wrap; /* Membuat card-card bisa membungkus ke baris berikutnya jika tidak cukup lebar */
     justify-content: center; /* Mengatur jarak antar card */
     gap: 10px; /* Jarak antar card */
+    padding: 10px;
+    
 }
 
 
@@ -131,6 +133,21 @@ a {
     height: 100%; /* Atur tinggi gambar card sesuai kebutuhan */
     object-fit:contain; /* Mengatur cara gambar ditampilkan di dalam elemen gambar */
     object-position: center top;
+}
+
+
+.card-gallery{
+    height: 100%; /* Mengatur tinggi gambar untuk memenuhi card sepenuhnya */
+    width: 100%; /* Mengatur lebar gambar untuk memenuhi card sepenuhnya */
+    object-fit: cover; /* Mengatur agar gambar menutupi area tanpa mengubah rasio aspek */
+    object-position: center; /* Memposisikan gambar di tengah */
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.card-gallery:hover {
+    transform: scale(1.05); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan untuk efek mengambang */
 }
 
 .card-body {
