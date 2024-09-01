@@ -8,12 +8,31 @@ body{
     src: url(../fonts/GrandHotel-Regular.ttf);
 }
 
+@font-face {
+    font-family: Pixelated;
+    src: url(../fonts/pixelated.TTF);
+}
+
 .header-container {
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 10px; /* Jarak antara gambar dan teks */
 }
+
+.nav-item .nav-link {
+    font-family: Pixelated;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Tambahkan transisi untuk perubahan warna dan posisi */
+}
+
+.nav-item .nav-link:hover {
+    color: #FFD700; /* Warna baru saat di-hover, bisa disesuaikan */
+    transform: translateY(-5px); /* Mengambang ke atas sebesar 5px */
+}
+
 
 
 
@@ -32,7 +51,7 @@ img.titleImages:hover{
 .title {
     width: 100%;
     height: 120px;
-    background-color: #13DFA9;
+    background-color: rgb(23, 169, 130);
  
 
 
@@ -50,6 +69,23 @@ img.titleImages:hover{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.custom-link {
+    text-decoration: none; /* Menghilangkan underline */
+    color: #000000; /* Mengubah warna teks menjadi emas */
+    font-weight: bold; /* Membuat teks menjadi bold */
+    font-size: 2.5rem; /* Ukuran font lebih besar */
+}
+
+
+
+/* Style default untuk link lainnya */
+a {
+    color: inherit; /* Menggunakan warna teks yang sesuai dengan konteks */
+    text-decoration: none; /* Menghilangkan underline default */
+}
+
+
+
 .title h1 {
     margin: 0; /* Menghapus margin default dari <h1> */
     font-weight: 500;
@@ -60,6 +96,14 @@ img.titleImages:hover{
     font-family: GrandHotel;
     
 }
+
+.nav-item {
+    margin: 0 10px; /* Memberikan jarak horizontal antar item */
+  }
+  
+  .nav-link {
+    padding: 10px 15px; /* Menambah padding pada link */
+  }
 
 .card-container {
     margin-top: 20px; /* Atur jarak antara card dan header */
@@ -99,6 +143,19 @@ img.titleImages:hover{
 
 .card-text {
     font-size: 0.875rem; /* Sesuaikan ukuran font teks card */
+}
+footer {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    margin-top: 5px; /* Memberikan jarak antara footer dan elemen card di atasnya */
+    padding: 10px; /* Memberikan padding untuk sedikit ruang di dalam footer */
+    /* Opsional: Memberikan warna latar belakang pada footer */
+    
+}
+
+footer p {
+    margin: 0; /* Menghilangkan margin default pada paragraf */
+    color: #ffffff; /* Warna teks opsional untuk teks copyright */
+    font-size: 1rem; /* Ukuran font */
 }
 
 
