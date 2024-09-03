@@ -1,7 +1,12 @@
 
 body{
-    background-color: #04FEE1;
+    
     overflow-x: hidden;
+}
+
+.index{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @font-face {
