@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/new icon.png">
 </head>
-<body class="index" oncontextmenu = "return false" oncopy="return false" oncut="return false" onpaste="return false">
+<body class="index d-flex flex-column min-vh-100" oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
   
     <header>
         <div class="header-container">
@@ -21,6 +21,7 @@
           </div>
         </div>
     </header>
+    
     <section>
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -40,47 +41,43 @@
         </li>
       </ul>
     </section>
-    
 
-    <section class="card-container d-flex justify-content-center align-items-center">
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 18rem;">
-        <a href="https://api.whatsapp.com/send?phone=81906282343" target="_blank"><img src="images/wa.png" class="card-img-top" alt="..."></a>
-        
-        </div>
+    <section class="card-container d-flex justify-content-center align-items-center flex-wrap">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+        <a href="https://api.whatsapp.com/send?phone=81906282343" target="_blank"><img src="images/wa.png" class="card-img-top" alt="WhatsApp"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 18rem;">
-        <a href="mailto:gacorxgallery@gmail.com" ><img src="images/email.png" class="card-img-top" alt="..."></a>
-        
-        </div>
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+        <a href="mailto:gacorxgallery@gmail.com"><img src="images/email.png" class="card-img-top" alt="Email"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 18rem;">
-        <a href="https://www.instagram.com/gacorxgallery/" target="_blank" ><img src="images/ig.png" class="card-img-top" alt="..."></a>
-        
-        </div>
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+        <a href="https://www.instagram.com/gacorxgallery/" target="_blank"><img src="images/ig.png" class="card-img-top" alt="Instagram"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 18rem;">
-        <a href="https://www.linkedin.com/in/han-lie-3127572b7/" target="_blank" ><img src="images/linkedin.png" class="card-img-top" alt="..."></a>
-        
-        </div>
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+        <a href="https://www.facebook.com/Achannsama" target="_blank"><img src="images/facebook.png" class="card-img-top" alt="Facebook"></a>
+      </div>
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+        <a href="https://www.linkedin.com/in/han-lie-3127572b7/" target="_blank"><img src="images/linkedin.png" class="card-img-top" alt="LinkedIn"></a>
       </div>
     </section>
 
-
-    <footer>
-      <p>Copyright&copy 2024</p>
+    <footer class="mt-auto">
+      <p class="text-center">Copyright&copy 2024</p>
     </footer>
 
 </body>
 <style>
+  html, body {
+    height: 100%;
+  }
+
   body {
     background-image: url('images/new_welcome_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    
   }
+
   .contact img {
-    
     width: 80%;
     height: auto;
     transition: transform 0.3s ease-in-out;
@@ -90,5 +87,9 @@
     transform: scale(1.2);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   }
-  </style>
+
+  footer {
+    flex-shrink: 0;
+  }
+</style>
 </html>
