@@ -30,7 +30,7 @@
           <a class="nav-link" href="gallery.html">Gallery Tiles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Open Commission</a>
+          <a class="nav-link" href="commission.html">Open Commission</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="aboutme.html">About me</a>
@@ -113,8 +113,8 @@
     </section>
 
 
-    <footer>
-      <p>Copyright&copy 2024</p>
+    <footer class="mt-auto">
+      <p class="text-center">Copyright&copy 2024</p>
     </footer>
 
 </body>
@@ -123,8 +123,32 @@
     background-image: url('images/new_welcome_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    
-  }
+    background-size: cover;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    flex-grow: 1; /* Allow the content section to take available space */
+}
+
+footer {
+    color: white;  
+    margin-top: 100px;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+footer p {
+    margin-top: 50px;
+    color: rgb(255, 255, 255); /* Ensure the text is visible */
+}
+
+
   </style>
 </html>

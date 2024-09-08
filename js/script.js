@@ -27,3 +27,22 @@ document.addEventListener('fullscreenchange', function() {
         alert('Screenshots and screen recordings are not allowed.');
     }
 });
+document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    let formData = new FormData(document.getElementById('commissionForm'));
+
+    fetch('send_order.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+        // Handle the response from the server
+        alert(result);
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+    });
+});
