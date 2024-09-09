@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/new icon.png">
 </head>
-<body class="index" oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
+<body oncontextmenu="return false" oncopy="return false" class="index" oncut="return false" onpaste="return false">
   
     <header>
         <div class="header-container">
@@ -43,7 +43,7 @@
     </section>
 
     <section class="form-section">
-      <form>
+      <form id="formSubmit">
         <div class="form-left me-4">
           <div class="mb-3">
             <label for="commissionType" class="form-label">Select Commission Type</label>
@@ -155,8 +155,26 @@
 </style>
 
 <script>
+  const commissionType = document.getElementById('commissionType')
   const pixelSizeSelector = document.getElementById('pixelSize');
   const priceInput = document.getElementById('price');
+  const formSubmit = document.getElementById('formSubmit');
+  const emailInput = document.getElementById('email');
+
+  formSubmit.addEventListener("submit", (e) => {
+    e.preventDefault();
+    window.location.replace(`
+    mailto:johansama9999@gmail.com?body=Halo, saya ingin memesan komis dengan format sebagai berikut:%0D%0A%0D%0A
+    1. Tipe Gambar: ${commissionType.value}%0D%0A
+    2. Ukuran pixel: ${pixelSizeSelector.value}%0D%0A%0D%0A
+
+    Harga setelah ditotal adalah ${priceInput.value}%0D%0A%0D%0A
+
+    Berikut adalah Email saya: ${emailInput.value}. Terima kasih!%0D%0A%0D%0A
+
+    Note: JANGAN LUPA MASUKKAN GAMBAR REFERENSI DAN BUKTI PEMBAYARAN!
+    `)
+  })
 
   pixelSizeSelector.addEventListener('change', function() {
     let selectedPixelSize = pixelSizeSelector.value;
