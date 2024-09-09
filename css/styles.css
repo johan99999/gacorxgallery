@@ -8,6 +8,9 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+.commission{
+    overflow-y: scroll;
+}
 
 @font-face {
     font-family: GrandHotel;
@@ -259,3 +262,11 @@ footer p {
     margin-left: 190px; /* Buang margin default agar benar-benar di pojok */
   }
   
+  .payment-column{
+    display:inline-block;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 650px;
+    width: 600px;
+    
+  }

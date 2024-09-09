@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/new icon.png">
 </head>
-<body oncontextmenu="return false" oncopy="return false" class="index" oncut="return false" onpaste="return false">
+<body class="commission" oncontextmenu="return false" oncopy="return false" class="index" oncut="return false" onpaste="return false">
   
     <header>
         <div class="header-container">
@@ -44,70 +44,77 @@
 
     <section class="form-section">
       <div class="container">
-        <form id="formSubmit" class="row g-3">
-          <div class="col-md-6">
-            <div class="mb-3">
-              <label for="commissionType" class="form-label">Select Commission Type</label>
-              <select class="form-select" id="commissionType" name="commissionType" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="Monuments and Nature">Monuments and Nature</option>
-                <option value="Photograph">Photograph</option>
-                <option value="Animate Character">Animate Character</option>
-                <option value="Pixel Assets">Pixel Assets</option>
-                <option value="Artworks">Artworks</option>
-              </select>
-            </div>
-  
-            <div class="mb-3">
-              <label for="pixelSize" class="form-label">Choose Pixel Size</label>
-              <select class="form-select" id="pixelSize" name="pixelSize" required>
-                <option value="" disabled selected>Select pixel size</option>
-                <option value="64x64">64x64</option>
-                <option value="128x128">128x128</option>
-                <option value="256x256">256x256</option>
-                <option value="512x512">512x512</option>
-                <option value="1024x1024">1024x1024</option>
-              </select>
-            </div>
-  
-            <div class="mb-3">
-              <label for="price" class="form-label">Price (Calculated based on pixel size)</label>
-              <input type="text" class="form-control" id="price" name="price" readonly>
-            </div>
-  
-            <div class="mb-3">
-              <label for="estimatedTime" class="form-label">Estimated Time of Completion</label>
-              <input type="text" class="form-control" id="estimatedTime" name="estimatedTime" readonly>
-            </div>
+        <div class="row">
+          <!-- Form column -->
+          <div class="col-md-6 col-sm-12 form-column">
+            <form id="formSubmit" class="row g-3">
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="commissionType" class="form-label">Select Commission Type</label>
+                  <select class="form-select" id="commissionType" name="commissionType" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Monuments and Nature">Monuments and Nature</option>
+                    <option value="Photograph">Photograph</option>
+                    <option value="Animate Character">Animate Character</option>
+                    <option value="Pixel Assets">Pixel Assets</option>
+                    <option value="Artworks">Artworks</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="pixelSize" class="form-label">Choose Pixel Size</label>
+                  <select class="form-select" id="pixelSize" name="pixelSize" required>
+                    <option value="" disabled selected>Select pixel size</option>
+                    <option value="64x64">64x64</option>
+                    <option value="128x128">128x128</option>
+                    <option value="256x256">256x256</option>
+                    <option value="512x512">512x512</option>
+                    <option value="1024x1024">1024x1024</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price (Calculated based on pixel size)</label>
+                  <input type="text" class="form-control" id="price" name="price" readonly>
+                </div>
+                <div class="mb-3">
+                  <label for="estimatedTime" class="form-label">Estimated Time of Completion</label>
+                  <input type="text" class="form-control" id="estimatedTime" name="estimatedTime" readonly>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="term"><a href="terms.html">Terms and Condition (read, it's important)</a></label>
+                  <input type="checkbox" name="accept" id="term" required>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Submit Commission</button>
+                </div>
+              </div>
+            </form>
           </div>
-  
-          <div class="col-md-6">
-            <div class="mb-3">
-              <label for="email" class="form-label">Your Email Address</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-  
-            <div class="mb-3">
-              <label for="term"><a href="terms.html">Terms and Condition (important)</a></label>
-              <input type="checkbox" name="accept" id="term" required>
-            </div>
-  
-            
-        
-
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Submit Commission</button>
-            </div>
-
-            <br>
-
-            <div class="d-grid position-relative">
-              <a href="howtoorder.html">How to Order?</a>
-            </div>
-        </form>
-        
-        
+    
+          <!-- Payment method column -->
+          
+      </div>
+      
     </section>
+    <div class="col-md-6 col-sm-12 payment-column">
+      <h5>Payment method</h5>
+      <ul>
+        <li>Note : Don't forget to take screenshot for payment proof</li>
+        <li>Paypal: @Johan99999 | 0819 0628 2343 | johansama9999@gmail.com</li>
+        <li>BCA: 8535487665 (HAN LIE)</li>
+        <li>Seabank: 901903415713 (HAN LIE)</li>
+        <li>Jago: 105893252209 (JOHAN)</li>
+        <li>Dana: 0819 0628 2343 (HAN LIE)</li>
+        <li>Gopay: 0819 0628 2343 (JOHAN)</li>
+        <li>Shopeepay: 0819 0628 2343 (johanliebert552/Han Lie)</li>
+      </ul>
+    </div>
+  </div>
 
     <footer>
       <p class="text-center mt-4">Copyright&copy 2024</p>
@@ -116,34 +123,64 @@
 </body>
 
 <style>
-  body {
-    background-image: url('images/new_welcome_bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+body {
+  background-image: url('images/new_welcome_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  overflow-y: auto;
+}
 
+.form-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.form-column, .payment-column {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+
+
+h5 {
+  font-size: 1.1rem;
+}
+
+ul {
+  font-size: 0.9rem;
+}
+
+label, input, select {
+  font-size: 0.9rem;
+}
+
+footer {
+  font-size: 0.8rem;
+  padding: 10px 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
   .form-section {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
-
-  form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .payment-column {
+    margin-left: 0;
+    margin-top: 20px;
   }
-
-  footer {
-    padding: 10px 0;
-    width: 100%;
-  }
+}
 </style>
 
 <script>
@@ -157,7 +194,7 @@
   formSubmit.addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.replace(`
-    mailto:johansama9999@gmail.com?body=Halo, saya ingin memesan komis dengan format sebagai berikut:%0D%0A%0D%0A
+    mailto:gacorxgallery@gmail.com?subject='New Order'?body=Halo, saya ingin memesan komis dengan format sebagai berikut:%0D%0A%0D%0A
     1. Tipe Gambar: ${commissionType.value}%0D%0A
     2. Ukuran pixel: ${pixelSizeSelector.value}%0D%0A%0D%0A
 
@@ -166,41 +203,35 @@
 
     Berikut adalah Email saya: ${emailInput.value}. Terima kasih!%0D%0A%0D%0A
 
-    Note: JANGAN LUPA MASUKKAN GAMBAR REFERENSI DAN BUKTI PEMBAYARAN!
-    `)
+    Note: saya sudah membaca persyaratan!
+    `);
   });
 
-  pixelSizeSelector.addEventListener('change', function() {
-    let selectedPixelSize = pixelSizeSelector.value;
+  pixelSizeSelector.addEventListener('change', function () {
     let price = 0;
     let estimatedTime = '';
+    const commissionTypeValue = commissionType.value;
+    const pixelSize = pixelSizeSelector.value;
 
-    switch(selectedPixelSize) {
-      case '64x64': 
-        price = 50; 
-        estimatedTime = '2 days'; 
-        break;
-      case '128x128': 
-        price = 100; 
-        estimatedTime = '4 days'; 
-        break;
-      case '256x256': 
-        price = 150; 
-        estimatedTime = '7 days'; 
-        break;
-      case '512x512': 
-        price = 200; 
-        estimatedTime = '10 days'; 
-        break;
-      case '1024x1024': 
-        price = 300; 
-        estimatedTime = '14 days'; 
-        break;
+    if (pixelSize === '64x64') {
+      price = '10 USD';
+      estimatedTime = '1-3 days';
+    } else if (pixelSize === '128x128') {
+      price = '20 USD';
+      estimatedTime = '3-5 days';
+    } else if (pixelSize === '256x256') {
+      price = '30 USD';
+      estimatedTime = '5-7 days';
+    } else if (pixelSize === '512x512') {
+      price = '40 USD';
+      estimatedTime = '7-10 days';
+    } else if (pixelSize === '1024x1024') {
+      price = '50 USD';
+      estimatedTime = '10-14 days';
     }
 
-    priceInput.value = "$" + price;
+    priceInput.value = price;
     estimatedTimeInput.value = estimatedTime;
   });
-
 </script>
 </html>
