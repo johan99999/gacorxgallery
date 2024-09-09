@@ -43,70 +43,70 @@
     </section>
 
     <section class="form-section">
-      <form id="formSubmit">
-        <div class="form-left me-4">
-          <div class="mb-3">
-            <label for="commissionType" class="form-label">Select Commission Type</label>
-            <select class="form-select" id="commissionType" name="commissionType" required>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Monuments and Nature">Monuments and Nature</option>
-              <option value="Photograph">Photograph</option>
-              <option value="Animate Character">Animate Character</option>
-              <option value="Pixel Assets">Pixel Assets</option>
-              <option value="Artworks">Artworks</option>
-            </select>
+      <div class="container">
+        <form id="formSubmit" class="row g-3">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="commissionType" class="form-label">Select Commission Type</label>
+              <select class="form-select" id="commissionType" name="commissionType" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Monuments and Nature">Monuments and Nature</option>
+                <option value="Photograph">Photograph</option>
+                <option value="Animate Character">Animate Character</option>
+                <option value="Pixel Assets">Pixel Assets</option>
+                <option value="Artworks">Artworks</option>
+              </select>
+            </div>
+  
+            <div class="mb-3">
+              <label for="pixelSize" class="form-label">Choose Pixel Size</label>
+              <select class="form-select" id="pixelSize" name="pixelSize" required>
+                <option value="" disabled selected>Select pixel size</option>
+                <option value="64x64">64x64</option>
+                <option value="128x128">128x128</option>
+                <option value="256x256">256x256</option>
+                <option value="512x512">512x512</option>
+                <option value="1024x1024">1024x1024</option>
+              </select>
+            </div>
+  
+            <div class="mb-3">
+              <label for="price" class="form-label">Price (Calculated based on pixel size)</label>
+              <input type="text" class="form-control" id="price" name="price" readonly>
+            </div>
+  
+            <div class="mb-3">
+              <label for="estimatedTime" class="form-label">Estimated Time of Completion</label>
+              <input type="text" class="form-control" id="estimatedTime" name="estimatedTime" readonly>
+            </div>
           </div>
+  
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="term"><a href="terms.html">Terms and Condition (important)</a></label>
+              <input type="checkbox" name="accept" id="term" required>
+            </div>
+  
+            
+        
 
-          <div class="mb-3">
-            <label for="pixelSize" class="form-label">Choose Pixel Size</label>
-            <select class="form-select" id="pixelSize" name="pixelSize" required>
-              <option value="" disabled selected>Select pixel size</option>
-              <option value="64x64">64x64</option>
-              <option value="128x128">128x128</option>
-              <option value="256x256">256x256</option>
-              <option value="512x512">512x512</option>
-              <option value="1024x1024">1024x1024</option>
-            </select>
-          </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Submit Commission</button>
+            </div>
 
-          <div class="mb-3">
-            <label for="price" class="form-label">Price (Calculated based on pixel size)</label>
-            <input type="text" class="form-control" id="price" name="price" readonly>
-          </div>
-        </div>
+            <br>
 
-        <div class="form-right">
-          <div class="mb-3">
-            <label for="imageUpload" class="form-label">Upload Reference Image</label>
-            <input class="form-control" type="file" id="imageUpload" name="imageUpload" accept="image/*">
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <!-- Tambahkan di dalam form sebelum tombol submit -->
-
-          
-          
-<div class="mb-3">
-  <label for="paymentProof" class="form-label">Upload Payment Proof</label>
-  <input class="form-control" type="file" id="paymentProof" name="paymentProof" accept="image/*,application/pdf">
-  <input type="hidden" id="paypalPaymentId" name="paypalPaymentId">
-</div>
-
-
-
-
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Submit Commission</button>
-          </div>
-        </div>
-      </form>
-      <div class="qr-code-section text-center">
-        <img src="images/pay.png" alt="QR Code" class="qr-code-img" width="200px">
-        <p class="pay-here-text" >Pay Here (Paypal Payment)</p>
-      </div>
+            <div class="d-grid position-relative">
+              <a href="howtoorder.html">How to Order?</a>
+            </div>
+        </form>
+        
+        
     </section>
 
     <footer>
@@ -114,6 +114,7 @@
     </footer>
 
 </body>
+
 <style>
   body {
     background-image: url('images/new_welcome_bg.jpg');
@@ -133,31 +134,23 @@
   }
 
   form {
-    max-width: 800px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .form-left, .form-right {
-    width: 48%;
   }
 
   footer {
-    
     padding: 10px 0;
     width: 100%;
   }
-  
 </style>
 
 <script>
-  const commissionType = document.getElementById('commissionType')
+  const commissionType = document.getElementById('commissionType');
   const pixelSizeSelector = document.getElementById('pixelSize');
   const priceInput = document.getElementById('price');
+  const estimatedTimeInput = document.getElementById('estimatedTime');
   const formSubmit = document.getElementById('formSubmit');
   const emailInput = document.getElementById('email');
 
@@ -168,26 +161,45 @@
     1. Tipe Gambar: ${commissionType.value}%0D%0A
     2. Ukuran pixel: ${pixelSizeSelector.value}%0D%0A%0D%0A
 
-    Harga setelah ditotal adalah ${priceInput.value}%0D%0A%0D%0A
+    Harga setelah ditotal adalah ${priceInput.value}%0D%0A
+    Estimasi waktu pengerjaan adalah ${estimatedTimeInput.value}%0D%0A%0D%0A
 
     Berikut adalah Email saya: ${emailInput.value}. Terima kasih!%0D%0A%0D%0A
 
     Note: JANGAN LUPA MASUKKAN GAMBAR REFERENSI DAN BUKTI PEMBAYARAN!
     `)
-  })
+  });
 
   pixelSizeSelector.addEventListener('change', function() {
     let selectedPixelSize = pixelSizeSelector.value;
     let price = 0;
+    let estimatedTime = '';
 
     switch(selectedPixelSize) {
-      case '64x64': price = 50; break;
-      case '128x128': price = 100; break;
-      case '256x256': price = 150; break;
-      case '512x512': price = 200; break;
-      case '1024x1024': price = 300; break;
+      case '64x64': 
+        price = 50; 
+        estimatedTime = '2 days'; 
+        break;
+      case '128x128': 
+        price = 100; 
+        estimatedTime = '4 days'; 
+        break;
+      case '256x256': 
+        price = 150; 
+        estimatedTime = '7 days'; 
+        break;
+      case '512x512': 
+        price = 200; 
+        estimatedTime = '10 days'; 
+        break;
+      case '1024x1024': 
+        price = 300; 
+        estimatedTime = '14 days'; 
+        break;
     }
+
     priceInput.value = "$" + price;
+    estimatedTimeInput.value = estimatedTime;
   });
 
 </script>

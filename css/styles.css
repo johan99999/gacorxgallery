@@ -242,3 +242,20 @@ footer p {
     padding: 10px 0;
     width: 100%;
   }  
+
+  .rules{
+    background-color: white;
+    text-align: center;
+  }
+  .form-section {
+    position: relative; /* Buat section sebagai parent positioning */
+  }
+  
+  .how-to-order-btn {
+    position:static;
+    bottom: 50px;
+    right: 10px;
+    margin-top: 120px;
+    margin-left: 190px; /* Buang margin default agar benar-benar di pojok */
+  }
+  

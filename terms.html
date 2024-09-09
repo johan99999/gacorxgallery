@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gacorxgallery - Open Commission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/new icon.png">
+</head>
+<body oncontextmenu="return false" oncopy="return false" class="index" oncut="return false" onpaste="return false">
+  
+    <header>
+        <div class="header-container">
+            <a href="https://www.instagram.com/gacorxgallery/" target="_blank">
+                <img class="titleImages" src="images/new icon.png" alt="icon">
+            </a>
+            <div class="title">
+              <a href="index.html" class="custom-link">
+                  <h1>Welcome to Han's Art Gallery</h1>
+              </a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery Tiles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="commission.html">Open Commission</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutme.html">About me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacts</a>
+            </li>
+        </ul>
+    </section>
+
+    <div class="rules">
+        <h3>Terms and Conditions</h3>
+        <p>Please read before placing an order:</p>
+        <ul>
+            <li>Check my Instagram stories to see if I am available for commissions.</li>
+            <li>Orders will be completed within the estimated time or sooner.</li>
+            <li>Commissions are placed through the website and handled via email.</li>
+            <li>Attach reference images and proof of payment in the email.</li>
+            <li>Payment is accepted via PayPal or local bank options.</li>
+            <li>Commissions without reference photos and proof of payment will not be processed.</li>
+            <li>If unavailable, you can request a cancellation using the provided contact.</li>
+            <li>Project progress will be updated via email, allowing for feedback.</li>
+        </ul>
+    </div>
+
+    <style>
+        body {
+            background-image: url('images/new_welcome_bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .rules {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .rules h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .rules p {
+            margin-bottom: 10px;
+        }
+
+        .rules ul {
+            list-style-type: square;
+            list-style-position: inside;
+            padding-left: 0;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .rules ul li {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+    </style>
+
+    <script>
+        const commissionType = document.getElementById('commissionType');
+        const pixelSizeSelector = document.getElementById('pixelSize');
+        const priceInput = document.getElementById('price');
+        const estimatedTimeInput = document.getElementById('estimatedTime');
+        const formSubmit = document.getElementById('formSubmit');
+        const emailInput = document.getElementById('email');
+
+        formSubmit.addEventListener("submit", (e) => {
+            e.preventDefault();
+            window.location.replace(`
+            mailto:johansama9999@gmail.com?body=Halo, saya ingin memesan komis dengan format sebagai berikut:%0D%0A%0D%0A
+            1. Tipe Gambar: ${commissionType.value}%0D%0A
+            2. Ukuran pixel: ${pixelSizeSelector.value}%0D%0A%0D%0A
+            Harga setelah ditotal adalah ${priceInput.value}%0D%0A
+            Estimasi waktu pengerjaan adalah ${estimatedTimeInput.value}%0D%0A%0D%0A
+            Berikut adalah Email saya: ${emailInput.value}. Terima kasih!%0D%0A%0D%0A
+            Note: JANGAN LUPA MASUKKAN GAMBAR REFERENSI DAN BUKTI PEMBAYARAN!
+            `);
+        });
+
+        pixelSizeSelector.addEventListener('change', function() {
+            let selectedPixelSize = pixelSizeSelector.value;
+            let price = 0;
+            let estimatedTime = '';
+
+            switch(selectedPixelSize) {
+                case '64x64': 
+                    price = 50; 
+                    estimatedTime = '2 days'; 
+                    break;
+                case '128x128': 
+                    price = 100; 
+                    estimatedTime = '4 days'; 
+                    break;
+                case '256x256': 
+                    price = 150; 
+                    estimatedTime = '7 days'; 
+                    break;
+                case '512x512': 
+                    price = 200; 
+                    estimatedTime = '10 days'; 
+                    break;
+                case '1024x1024': 
+                    price = 300; 
+                    estimatedTime = '14 days'; 
+                    break;
+            }
+
+            priceInput.value = "$" + price;
+            estimatedTimeInput.value = estimatedTime;
+        });
+    </script>
+</body>
+</html>
