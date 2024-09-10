@@ -11,6 +11,9 @@ body{
 .commission{
     overflow-y: scroll;
 }
+.terms{
+    overflow-y: scroll;
+}
 
 @font-face {
     font-family: GrandHotel;

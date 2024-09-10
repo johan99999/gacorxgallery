@@ -199,16 +199,20 @@ footer {
   formSubmit.addEventListener("submit", (e) => {
     e.preventDefault();
     window.location.replace(`
-    mailto:gacorxgallery@gmail.com?subject='New Order'?body=Halo, saya ingin memesan komis dengan format sebagai berikut:%0D%0A%0D%0A
-    1. Tipe Gambar: ${commissionType.value}%0D%0A
-    2. Ukuran pixel: ${pixelSizeSelector.value}%0D%0A%0D%0A
+    mailto:gacorxgallery@gmail.com?subject=New%20Order&body=Hello,%20I%20want%20to%20order%20commissions%20in%20the%20following%20format:%0D%0A%0D%0A
 
-    Harga setelah ditotal adalah ${priceInput.value}%0D%0A
-    Estimasi waktu pengerjaan adalah ${estimatedTimeInput.value}%0D%0A%0D%0A
+    1. Commission Type: ${commissionType.value}%0D%0A
+    2. Pixel Size: ${pixelSizeSelector.value}%0D%0A%0D%0A
 
-    Berikut adalah Email saya: ${emailInput.value}. Terima kasih!%0D%0A%0D%0A
+    Total Price : ${priceInput.value}%0D%0A
+    Estimated time : ${estimatedTimeInput.value}%0D%0A%0D%0A
 
-    Note: saya sudah membaca persyaratan!
+    My Email : ${emailInput.value}%0D%0A%0D%0A
+    
+    Thank you!%0D%0A%0D%0A
+
+    Note: I have read the terms!%0D%0A%0D%0A
+    Reminder : Please ensure to attach reference images/photos and proof of payment screenshots in this email format, as we require them for processing your order. Without these, we won't be able to move forward with your request.
     `);
   });
 
