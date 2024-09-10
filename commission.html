@@ -76,9 +76,14 @@
                   <input type="text" class="form-control" id="price" name="price" readonly>
                 </div>
                 <div class="mb-3">
+                  <label for="priceIDR" class="form-label">Price in Rupiah (IDR)</label>
+                  <input type="text" class="form-control" id="priceIDR" name="priceIDR" readonly>
+                </div>
+                <div class="mb-3">
                   <label for="estimatedTime" class="form-label">Estimated Time of Completion</label>
                   <input type="text" class="form-control" id="estimatedTime" name="estimatedTime" readonly>
                 </div>
+                
               </div>
               <div class="col-md-12">
                 <div class="mb-3">
@@ -208,30 +213,36 @@ footer {
   });
 
   pixelSizeSelector.addEventListener('change', function () {
-    let price = 0;
-    let estimatedTime = '';
-    const commissionTypeValue = commissionType.value;
-    const pixelSize = pixelSizeSelector.value;
+  let price = 0;
+  let estimatedTime = '';
+  let priceIDR = 0;
+  const exchangeRate = 15000; // 1 USD = 15,000 IDR
 
-    if (pixelSize === '64x64') {
-      price = '10 USD';
-      estimatedTime = '1-3 days';
-    } else if (pixelSize === '128x128') {
-      price = '20 USD';
-      estimatedTime = '3-5 days';
-    } else if (pixelSize === '256x256') {
-      price = '30 USD';
-      estimatedTime = '5-7 days';
-    } else if (pixelSize === '512x512') {
-      price = '40 USD';
-      estimatedTime = '7-10 days';
-    } else if (pixelSize === '1024x1024') {
-      price = '50 USD';
-      estimatedTime = '10-14 days';
-    }
+  const pixelSize = pixelSizeSelector.value;
 
-    priceInput.value = price;
-    estimatedTimeInput.value = estimatedTime;
-  });
+  if (pixelSize === '64x64') {
+    price = 4;
+    estimatedTime = '1-2 days';
+  } else if (pixelSize === '128x128') {
+    price = 8;
+    estimatedTime = '2-3 days';
+  } else if (pixelSize === '256x256') {
+    price = 15;
+    estimatedTime = '3-4 days';
+  } else if (pixelSize === '512x512') {
+    price = 20;
+    estimatedTime = '4-5 days';
+  } else if (pixelSize === '1024x1024') {
+    price = 35;
+    estimatedTime = '5-7 days';
+  }
+
+  priceIDR = price * exchangeRate; // Convert USD to IDR
+
+  priceInput.value = `${price} USD`;
+  document.getElementById('priceIDR').value = `${priceIDR.toLocaleString()} IDR`;
+  estimatedTimeInput.value = estimatedTime;
+});
+
 </script>
 </html>
