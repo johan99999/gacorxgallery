@@ -21,6 +21,7 @@
           </div>
         </div>
     </header>
+    
     <section>
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -41,65 +42,57 @@
       </ul>
     </section>
     
-
     <section class="card-container">
-        <div class="row row-cols-1 row-cols-md-5 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
             <div class="col">
               <div class="card h-100">
                 <img src="images/buddha.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title" align="center">Monuments And Nature</h5>
-                  <p class="card-text" align="center">Creating a monuments or nature pixel art's</p>
+                  <h5 class="card-title text-center">Monuments And Nature</h5>
+                  <p class="card-text text-center">Creating a monuments or nature pixel art's</p>
                 </div>
-                
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
                 <img src="images/1.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title" align="center">Photograph</h5>
-                  <p class="card-text" align="center">Creating a photograph pixel art for digital souvenir and memento</p>
+                  <h5 class="card-title text-center">Photograph</h5>
+                  <p class="card-text text-center">Creating a photograph pixel art for digital souvenir and memento</p>
                 </div>
-                
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
                 <img src="images/Han Pirates style blinking idle test.gif" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title" align = "center ">Animate Your Character</h5>
-                  <p class="card-text"align="center">Animate your character pixel art for fun</p>
+                  <h5 class="card-title text-center">Animate Your Character</h5>
+                  <p class="card-text text-center">Animate your character pixel art for fun</p>
                 </div>
-                
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
                 <img src="images/ezgif-7-da09a55777.gif" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title" align=center>Pixel Assets</h5>
-                  <p class="card-text"align="center">Animated character or sprite pixel art for game assets</p>
+                  <h5 class="card-title text-center">Pixel Assets</h5>
+                  <p class="card-text text-center">Animated character or sprite pixel art for game assets</p>
                 </div>
-                
               </div>
             </div>
             <div class="col">
               <div class="card h-100">
                 <img src="images/frog smoking.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title" align=center>Artworks</h5>
-                  <p class="card-text"align="center">Some artworks for inspiration</p>
+                  <h5 class="card-title text-center">Artworks</h5>
+                  <p class="card-text text-center">Some artworks for inspiration</p>
                 </div>
-                
               </div>
             </div>
           </div>
     </section>
-    
 
-
-    <footer>
+    <footer class="text-center">
       <p>Copyright&copy 2024</p>
     </footer>
 
@@ -109,8 +102,29 @@
     background-image: url('images/new_welcome_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
-    
+    background-size: cover;
   }
-  </style>
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card-title, .card-text {
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title h1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
 </html>
