@@ -1,0 +1,276 @@
+
+body{
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.index{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.commission{
+    overflow-y: scroll;
+}
+.terms{
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: GrandHotel;
+    src: url(../fonts/GrandHotel-Regular.ttf);
+}
+
+@font-face {
+    font-family: Pixelated;
+    src: url(../fonts/pixelated.TTF);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px; /* Jarak antara gambar dan teks */
+}
+
+.nav-item .nav-link {
+    font-family: Pixelated;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Tambahkan transisi untuk perubahan warna dan posisi */
+}
+
+.nav-item .nav-link:hover {
+    color: #FFD700; /* Warna baru saat di-hover, bisa disesuaikan */
+    transform: translateY(-5px); /* Mengambang ke atas sebesar 5px */
+}
+
+
+
+
+img.titleImages {
+    width: 120px;
+    height: auto; /* Menjaga proporsi gambar */
+    border: 10px solid black;
+    padding: 10px;
+}
+
+img.titleImages:hover{
+    transform: scale(1.01); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(23, 169, 130);
+ 
+
+
+    border: 10px solid black;
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title:hover{
+    background-color: aliceblue;
+    transform: scale(1.01); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.custom-link {
+    text-decoration: none; /* Menghilangkan underline */
+    color: #000000; /* Mengubah warna teks menjadi emas */
+    font-weight: bold; /* Membuat teks menjadi bold */
+    font-size: 2.5rem; /* Ukuran font lebih besar */
+}
+
+
+
+/* Style default untuk link lainnya */
+a {
+    color: inherit; /* Menggunakan warna teks yang sesuai dengan konteks */
+    text-decoration: none; /* Menghilangkan underline default */
+}
+
+
+
+.title h1 {
+    margin: 0; /* Menghapus margin default dari <h1> */
+    font-weight: 500;
+    font-size: 60px;
+    -webkit-text-stroke: 1px white;
+    
+    text-align: center;
+    font-family: GrandHotel;
+    
+}
+
+.nav-item {
+    margin: 0 10px; /* Memberikan jarak horizontal antar item */
+  }
+  
+  .nav-link {
+    padding: 10px 15px; /* Menambah padding pada link */
+  }
+
+.card-container {
+    margin-top: 10px; /* Atur jarak antara card dan header */
+    display: flex;
+    flex-wrap: wrap; /* Membuat card-card bisa membungkus ke baris berikutnya jika tidak cukup lebar */
+    justify-content: center; /* Mengatur jarak antar card */
+    gap: 10px; /* Jarak antar card */
+    padding: 25px;
+    
+}
+
+
+.card {
+    width: 190px; /* Atur lebar card sesuai kebutuhan */
+    height: 20px;
+    max-width: 800px; /* Atur lebar maksimal card */
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi yang mulus */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan untuk efek mengambang */
+}
+
+.card-img-top {
+    height: 100%; /* Atur tinggi gambar card sesuai kebutuhan */
+    object-fit:contain; /* Mengatur cara gambar ditampilkan di dalam elemen gambar */
+    object-position: center top;
+}
+
+
+.card-gallery{
+    height: 100%; /* Mengatur tinggi gambar untuk memenuhi card sepenuhnya */
+    width: 100%; /* Mengatur lebar gambar untuk memenuhi card sepenuhnya */
+    object-fit: cover; /* Mengatur agar gambar menutupi area tanpa mengubah rasio aspek */
+    object-position: center; /* Memposisikan gambar di tengah */
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.card-gallery:hover {
+    transform: scale(1.05); /* Membesarkan card sedikit saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan untuk efek mengambang */
+}
+
+.card-body {
+    padding: 0.5rem; /* Atur padding dalam card sesuai kebutuhan */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Sesuaikan ukuran font judul card */
+}
+
+.card-text {
+    font-size: 0.875rem; /* Sesuaikan ukuran font teks card */
+}
+footer {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    margin-top: 5px; /* Memberikan jarak antara footer dan elemen card di atasnya */
+    padding: 10px; /* Memberikan padding untuk sedikit ruang di dalam footer */
+    /* Opsional: Memberikan warna latar belakang pada footer */
+    
+}
+
+footer p {
+    margin: 0; /* Menghilangkan margin default pada paragraf */
+    color: #ffffff; /* Warna teks opsional untuk teks copyright */
+    font-size: 1rem; /* Ukuran font */
+}
+
+
+.gallery {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.contact img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact img:hover {
+    transform: scale(1.2); /* Increase the size */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for the floating effect */
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  form {
+    max-width: 65%; /* Lebar form dikurangi sedikit */
+  }
+  
+  .qr-code-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menjaga QR code dan teks di tengah */
+    margin-top: 20px; /* Menambahkan jarak dari form jika diperlukan */
+    margin-left: 25px;
+  }
+  
+  .qr-code-img {
+    margin-bottom: 10px; /* Jarak antara QR code dan teks */
+  }
+  
+  .pay-here-text {
+    font-size: 1.2rem; /* Ukuran font teks bisa disesuaikan */
+    font-weight: bold; /* Membuat teks lebih menonjol */
+  }
+  
+  
+  .footer {
+    padding: 10px 0;
+    width: 100%;
+  }  
+
+  .rules{
+    background-color: white;
+    text-align: center;
+  }
+  .form-section {
+    position: relative; /* Buat section sebagai parent positioning */
+  }
+  
+  .how-to-order-btn {
+    position:static;
+    bottom: 50px;
+    right: 10px;
+    margin-top: 120px;
+    margin-left: 190px; /* Buang margin default agar benar-benar di pojok */
+  }
+  
+  .payment-column{
+    display:inline-block;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 650px;
+    width: 600px;
+    
+  }
