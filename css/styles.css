@@ -7,7 +7,7 @@ body{
 
 .index{
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 .commission{
     overflow-y: scroll;
@@ -35,7 +35,7 @@ body{
 
 .nav-item .nav-link {
     font-family: Pixelated;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     margin: 0 10px;
     transition: color 0.3s ease, transform 0.3s ease; /* Tambahkan transisi untuk perubahan warna dan posisi */
@@ -132,7 +132,7 @@ a {
 .card {
     width: 190px; /* Atur lebar card sesuai kebutuhan */
     height: 20px;
-    max-width: 800px; /* Atur lebar maksimal card */
+    max-width: 800px; 
     margin: 0 auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi yang mulus */
 }
@@ -150,7 +150,7 @@ a {
 
 
 .card-gallery{
-    height: 100%; /* Mengatur tinggi gambar untuk memenuhi card sepenuhnya */
+   /* Mengatur tinggi gambar untuk memenuhi card sepenuhnya */
     width: 100%; /* Mengatur lebar gambar untuk memenuhi card sepenuhnya */
     object-fit: cover; /* Mengatur agar gambar menutupi area tanpa mengubah rasio aspek */
     object-position: center; /* Memposisikan gambar di tengah */
@@ -189,10 +189,10 @@ footer p {
 }
 
 
-.gallery {
+/* .gallery {
     position: relative;
     display: inline-block;
-}
+} */
 
 
 
@@ -274,3 +274,94 @@ footer p {
     width: 600px;
     
   }
+
+  /* Gaya untuk desktop (tetap seperti awal) */
+@media (min-width: 992px) {
+  /* Tidak ada perubahan pada gaya desktop */
+  /* Gunakan gaya default Anda di sini */
+}
+
+/* Gaya khusus untuk smartphone */
+@media (max-width: 576px) {
+  /* Header */
+  .header-container {
+    flex-direction: column; /* Mengubah tata letak menjadi kolom pada smartphone */
+    align-items: center; /* Menjaga gambar dan teks tetap di tengah */
+  }
+
+  .title h1 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil di smartphone */
+  }
+
+  /* Navigasi menjadi dropdown pada perangkat kecil */
+  .nav {
+    flex-direction: column; /* Ubah tata letak navigasi menjadi vertikal */
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 5px 0; /* Jarak antar item navigasi di smartphone */
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk navigasi di smartphone */
+  }
+
+  /* Card - Atur ukuran agar sesuai dengan layar kecil */
+  .card-container {
+    padding: 10px; /* Mengurangi padding untuk menghemat ruang */
+  }
+
+  .card {
+    width: 100%; /* Membuat card memenuhi lebar layar di smartphone */
+    margin-bottom: 20px; /* Memberi jarak antar card */
+  }
+
+  .card-img-top {
+    height: auto; /* Sesuaikan tinggi gambar card secara otomatis di smartphone */
+  }
+
+  /* Form Section */
+  .form-section {
+    flex-direction: column; /* Mengubah tata letak menjadi kolom di smartphone */
+  }
+
+  form {
+    max-width: 100%; /* Membuat form memenuhi lebar layar */
+  }
+
+  .qr-code-section {
+    margin-left: 0; /* Mengatur ulang margin di smartphone */
+  }
+
+  .how-to-order-btn {
+    margin-left: 0; /* Menghapus margin agar tombol sejajar di smartphone */
+  }
+
+  .payment-column {
+    margin-left: 0; /* Atur ulang posisi untuk layar kecil */
+    width: 100%; /* Lebar penuh pada perangkat kecil */
+    margin-top: 20px; /* Menyesuaikan posisi di smartphone */
+  }
+
+  .card-gallery{
+    width: 95%;
+  }
+
+  
+}
+
+.navbar-brand {
+    font-family: Pixelated;
+    color: white;
+    font-size: 15px;
+}
+.navbar-brand :hover{
+    color: #FFD700; /* Warna baru saat di-hover, bisa disesuaikan */
+    transform: translateY(-5px); /* Mengambang ke atas sebesar 5px */
+}
+
+.navbar-brand img{
+    width: 80px;
+    height: 80px;
+}
