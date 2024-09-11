@@ -11,51 +11,51 @@
 </head>
 <body class="index d-flex flex-column min-vh-100" oncontextmenu="return false" oncopy="return false" oncut="return false" onpaste="return false">
   
-    <header>
-        <div class="header-container">
-            <a href="https://www.instagram.com/gacorxgallery/" target="_blank"><img class="titleImages" src="images/new icon.png" alt="icon"></a>
-            <div class="title">
-              <a href="index.html" class="custom-link">
-                  <h1>Welcome to Han's Art Gallery</h1>
-              </a>
-          </div>
-        </div>
-    </header>
-    
-    <section>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery Tiles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="commission.html">Open Commission</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutme.html">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="commission.html">Contacts</a>
-        </li>
-      </ul>
-    </section>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/new icon.png" alt="icon" width="30" height="30">
+        Han's Art Gallery
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery Tiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="commission.html">Open Commission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutme.html">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="card-container d-flex justify-content-center align-items-center flex-wrap">
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+    <section class="card-container d-flex  align-items-center ">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4">
         <a href="https://api.whatsapp.com/send?phone=81906282343" target="_blank"><img src="images/wa.png" class="card-img-top" alt="WhatsApp"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4">
         <a href="mailto:gacorxgallery@gmail.com"><img src="images/email.png" class="card-img-top" alt="Email"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4">
         <a href="https://www.instagram.com/gacorxgallery/" target="_blank"><img src="images/ig.png" class="card-img-top" alt="Instagram"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4"">
         <a href="https://www.facebook.com/Achannsama" target="_blank"><img src="images/facebook.png" class="card-img-top" alt="Facebook"></a>
       </div>
-      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4" style="width: 14rem;">
+      <div class="contact col-lg-3 col-md-4 col-sm-6 mb-4">
         <a href="https://www.linkedin.com/in/han-lie-3127572b7/" target="_blank"><img src="images/linkedin.png" class="card-img-top" alt="LinkedIn"></a>
       </div>
     </section>
@@ -77,8 +77,12 @@
     background-size: 100% 100%;
   }
 
+  .card-container{
+    margin-left: 120px;
+  }
+
   .contact img {
-    width: 80%;
+    width: 50%;
     height: auto;
     transition: transform 0.3s ease-in-out;
   }
@@ -91,5 +95,29 @@
   footer {
     flex-shrink: 0;
   }
+  @media (max-width: 576px) {
+  .card-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  */
+    display: inline-block;
+    margin-left: 70px;
+  }
+
+  .contact {
+    width: 45%; /* Sesuaikan lebar card agar 3 per baris */
+    margin-bottom: 10px;
+    
+  }
+
+  .contact img {
+    width: 45%; /* Menyesuaikan lebar gambar dengan ukuran card */
+    align-items: center;
+    align-content: center;
+    
+  }
+}
+
+
 </style>
 </html>

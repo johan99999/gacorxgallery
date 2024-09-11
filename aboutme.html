@@ -11,35 +11,36 @@
 </head>
 <body class="index" oncontextmenu = "return false" oncopy="return false" oncut="return false" onpaste="return false">
   
-    <header>
-        <div class="header-container">
-            <a href="https://www.instagram.com/gacorxgallery/" target="_blank"><img class="titleImages" src="images/new icon.png" alt="icon"></a>
-            <div class="title">
-              <a href="index.html" class="custom-link">
-                  <h1>Welcome to Han's Art Gallery</h1>
-              </a>
-          </div>
-        </div>
-    </header>
-    <section>
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery Tiles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="commission.html">Open Commission</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutme.html">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contacts</a>
-        </li>
-      </ul>
-    </section>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/new icon.png" alt="icon" width="30" height="30">
+        Han's Art Gallery
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery Tiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="commission.html">Open Commission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutme.html">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     
 
     <section class="card-container">
@@ -113,9 +114,9 @@
     </section>
 
 
-    <footer class="mt-auto">
+    <!-- <footer class="mt-auto">
       <p class="text-center">Copyright&copy 2024</p>
-    </footer>
+    </footer> -->
 
 </body>
 <style>
@@ -130,13 +131,13 @@
 }
 
 .card-container {
-    flex-grow: 1; /* Allow the content section to take available space */
+     /* Allow the content section to take available space */
     margin-top: 0;
 }
 
 footer {
     color: white;  
-    margin-top: 100px;
+    margin-top: auto;
     padding: 10px;
     text-align: center;
     position: sticky;
@@ -145,10 +146,21 @@ footer {
     z-index: 1;
 }
 
-footer p {
+/* footer p {
     margin-top: 50px;
-    color: rgb(255, 255, 255); /* Ensure the text is visible */
-}
+    color: rgb(255, 255, 255); 
+} */
+@media (max-width: 576px) {
+    .card-container {
+      padding: 10px;
+    }
+
+    .card {
+      font-size: 0.9rem;
+      width: 90%;
+    }
+  }
+
 
 
   </style>
