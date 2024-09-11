@@ -197,15 +197,25 @@ footer {
     margin-top: 20px;
   }
   @media (max-width: 576px) {
-  .form-column, .payment-column {
+  .form-column {
+    width: 99%; /* Ensure full-width columns on mobile */
+    padding: 9px; /* Reduce padding */
+    margin: 10px;
+    display: flexbox;
+    position: static;
+  }
+ 
+
+}
+@media (max-width: 576px) {
+  .payment-column {
     width: 95%; /* Ensure full-width columns on mobile */
     padding: 5px; /* Reduce padding */
     margin: 10px;
-    display: flex;
+    display: block;
     position: static;
   }
 }
-
 }
 </style>
 
@@ -268,6 +278,7 @@ footer {
   document.getElementById('priceIDR').value = `${priceIDR.toLocaleString()} IDR`;
   estimatedTimeInput.value = estimatedTime;
 });
+
 
 </script>
 </html>
